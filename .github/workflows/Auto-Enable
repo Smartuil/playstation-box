@@ -11,7 +11,7 @@ jobs:
       - name: Check for disabled workflows
         id: enable
         env:
-          GH_TOKEN: ${{ secrets.PAT }}  # 需事先在仓库Settings > Secrets中配置
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 需事先在仓库Settings > Secrets中配置
           REPO: ${{ github.repository }}
         run: |
           # 获取所有被禁用的工作流ID
